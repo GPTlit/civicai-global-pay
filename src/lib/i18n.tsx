@@ -454,7 +454,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     if (saved && dicts[saved]) setLangState(saved);
   }, []);
 
-  const dir = lang === "ar" ? "rtl" : "ltr";
+  const dir: "rtl" | "ltr" = lang === "ar" ? "rtl" : "ltr";
 
   useEffect(() => {
     document.documentElement.lang = lang;
