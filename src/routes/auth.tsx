@@ -2,8 +2,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { Apple, ChevronLeft, Mail, ShieldCheck, Smartphone } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { LogoWordmark } from "@/components/civic/Logo";
-import { GhostButton, LanguageSelector, PrimaryButton } from "@/components/civic/Shell";
-import { Field, inputClass } from "@/components/civic/Field";
+import { LanguageSelector, PrimaryButton } from "@/components/civic/Shell";
 import { useI18n } from "@/lib/i18n";
 import { useStore } from "@/lib/store";
 
@@ -212,4 +211,3 @@ function Auth() {
   );
 }
 
-export { GhostButton, Field, inputClass };
