@@ -35,7 +35,7 @@ function Onboarding() {
   const navigate = useNavigate();
   const { finishOnboarding } = useStore();
   const [i, setI] = useState(0);
-  const { Icon, key } = slides[i];
+  const { Icon, key } = slides[i]!;
 
   const finish = () => {
     finishOnboarding();
