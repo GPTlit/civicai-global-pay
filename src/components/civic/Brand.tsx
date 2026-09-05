@@ -21,7 +21,7 @@ export function BrandMark({
   name,
   size = 44,
 }: {
-  brand?: string;
+  brand?: string | undefined;
   name: string;
   size?: number;
 }) {
