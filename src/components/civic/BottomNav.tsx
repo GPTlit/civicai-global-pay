@@ -3,13 +3,20 @@ import { CreditCard, Home, QrCode, User, Users } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { useCurrentPath } from "./Shell";
 
-const items = [
+type NavItem = {
+  to: "/home" | "/cards" | "/scan" | "/recipients" | "/profile";
+  key: string;
+  Icon: typeof Home;
+  center?: boolean;
+};
+
+const items: NavItem[] = [
   { to: "/home", key: "nav.home", Icon: Home },
   { to: "/cards", key: "nav.cards", Icon: CreditCard },
   { to: "/scan", key: "nav.scan", Icon: QrCode, center: true },
   { to: "/recipients", key: "nav.recipients", Icon: Users },
   { to: "/profile", key: "nav.profile", Icon: User },
-] as const;
+];
 
 export function BottomNav() {
   const { t } = useI18n();
